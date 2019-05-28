@@ -88,7 +88,7 @@ Phabricator
   - Select commit
   - Add a build step of type ``Make HTTP Request``
   - Set the URI to:
-    ``http://jenkins:8080/jenkins/job/${repository.callsign}/buildWithParameters?DIFF_ID=${buildable.diff}&PHID=${target.phid}&COMMIT=${buildable.commit}``
+    ``http://jenkins:8080/job/${repository.callsign}/buildWithParameters?DIFF_ID=${buildable.diff}&PHID=${target.phid}&COMMIT=${buildable.commit}``
   - Set HTTP Method to POST
   - Add Jenkins credential (to be created in Jenkins later)
 
