@@ -22,14 +22,13 @@ as the base images for this composition.
 .. _Jenkins image: https://hub.docker.com/r/bitnami/jenkins/
 
 You may wish to add these lines to your ``/etc/hosts`` file to aid in
-accessing the created containers.  Phabricator requires a ``.`` in its name
-so it can't be just ``phabricator``.  Jenkins is running on port 8080 so
+accessing the created containers.  Jenkins is running on port 8080 so
 access it via ``http://jenkins:8080/``
 
 .. code::
 
   127.0.0.1       jenkins
-  127.0.0.1       phabricator.local
+  127.0.0.1       phabricator
 
 This was tested with a pipeline project.  The project itself is private but
 the ``Jenkinsfile`` is included here as ``example_Jenkinsfile``.
@@ -136,7 +135,7 @@ Jenkins
   - Select Ok
   - Specify pipeline script from SCM
   - Confugre the appropriate SCM
-  - Set the URL to ``ssh://git@phabricator.local/diffusion/THECALLSIGN/the-name.git``
+  - Set the URL to ``ssh://git@phabricator/diffusion/THECALLSIGN/the-name.git``
   - In additional behaviours > Add
 
     - wipeout repository and force clone
@@ -174,19 +173,19 @@ Jenkins
 
     - Add
     - Phabricator conduit key
-    - URL ``http://phabricator.local``
+    - URL ``http://phabricator``
 
       - This should be HTTPS, but no SSL certificates setup here yet
 
-    - Description ``jenkins@phabricator.local``
+    - Description ``jenkins@phabricator``
     - Conduit token
 
-      - Generate one for the ``jenkins@phabricator.local`` user over in
+      - Generate one for the ``jenkins@phabricator`` user over in
         Phabricator
 
   - Phabricator notifications
 
-    - Select the ``http://phabricator.local`` credentials
+    - Select the ``http://phabricator`` credentials
 
 
 Quick Test
