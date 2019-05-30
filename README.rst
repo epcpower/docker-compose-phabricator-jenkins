@@ -135,7 +135,7 @@ Jenkins
   - Select Ok
   - Specify pipeline script from SCM
   - Confugre the appropriate SCM
-  - Set the URL to ``ssh://git@phabricator/diffusion/THECALLSIGN/the-name.git``
+  - Set the URL to ``ssh://git@phabricator/source/the-name.git``
   - In additional behaviours > Add
 
     - wipeout repository and force clone
