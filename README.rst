@@ -154,7 +154,7 @@ Jenkins
   - Uncheck lightweight checkout
   - Advanced
 
-    - Set the name to match the Phabricator repository name
+    - Set the name to ``origin``
 
   - Check this project is parametrized
   - Add three string parameters named ``DIFF_ID``, ``PHID``, and ``COMMIT``
